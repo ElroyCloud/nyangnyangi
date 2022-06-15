@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRORAIE BETA SITE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua:ital,wght@0,300;0,400;0,700;1,100&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div class="nav-top">
+        KRORAIE#4187
+        <div class="nav-img">
+            <a href="https://discord.gg/bhvnanFJQH" target="_blank"><img src="img/discord.png" href="https://discord.gg/bhvnanFJQH"></a>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="container">
+        <div class="top">
+            <h1>냥냥이 명령어</h1>
+            <h3>List of Bot Commands</h3>
+        </div>
+        <div class="command-section">
+            <ul>
+                <li class="closed" id="1" onclick="change_board(this)">노래채널 명령어</li>
+                <li class="open" id="2" onclick="change_board(this)">플레이리스트 명령어</li>
+                <li class="open" id="3" onclick="change_board(this)">기본 명령어</li>
+                <li class="open" id="4" onclick="change_board(this)">리스트 저장 명령어</li>
+                <li class="open" id="5" onclick="change_board(this)">접두사 명령어</li>
+            </ul>
+        </div>
+        <div class="command-list">
+            <table class="commands" id="board1">
+                <tr>
+                    <th>명령어</th>
+                    <th>설명</th>
+                    <th>사용</th>
+                </tr>
+                <tr>
+                    <td>/노래채널 set</td>
+                    <td>제목만 입력해도 재생되는 채팅방을 생성합니다.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/노래채널 delete</td>
+                    <td>생성했던 노래채널을 서버데이터에서 삭제합니다.</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table class="commands" id="board2">
+                <tr>
+                    <th>명령어</th>
+                    <th>설명</th>
+                    <th>사용</th>
+                </tr>
+                <tr>
+                    <td>/리스트만들기</td>
+                    <td>플레이리스트 하나를 생성합니다.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/리스트</td>
+                    <td>자신이 생성한 플레이리스트 목록을 보여줍니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/리스트정보</td>
+                    <td>플레이리스트에 등록된 노래전체를 확인합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/리스트노래삭제</td>
+                    <td>저장된 플레이리스트에서 원하는 노래 하나를 제거합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/리스트삭제</td>
+                    <td>자신이 저장한 플레이리스트를 삭제합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/불러오기</td>
+                    <td>자신이 저장한 플레이리스트를 불러와 대기열에 추가시킵니다</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table class="commands" id="board3">
+                <tr>
+                    <th>명령어</th>
+                    <th>설명</th>
+                    <th>사용</th>
+                </tr>
+                <tr>
+                    <td>/재생</td>
+                    <td>노래 제목이나 링크를 검색하여 재생합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/스킵</td>
+                    <td>현재 재생중인 노래를 스킵하고 다음 노래를 재생합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/정지</td>
+                    <td>노래를 모두 정지하고 봇이 나갑니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/skipto (패치중..)</td>
+                    <td>원하는 대기열 번호로 건너뜁니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/셔플</td>
+                    <td>대기열에 추가된 노래 순서를 섞습니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/반복</td>
+                    <td>현재곡,대기열전체 반복 기능을 킵니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/들어와</td>
+                    <td>현재 접속중인 통화방에 노래봇이 접속합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/나가</td>
+                    <td>노래를 모두 정지하고 봇이 나갑니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/볼륨</td>
+                    <td>현재 재생중인 노래의 볼륨을 조절합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/접두사변경</td>
+                    <td>현재 서버에서 접두사를 변경합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/현재곡</td>
+                    <td>현재 재생중인 노래의 정보를 표기합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/대기열초기화</td>
+                    <td>대기열을 초기화합니다 (!제거)</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table class="commands" id="board4">
+                <tr>
+                    <th>명령어</th>
+                    <th>설명</th>
+                    <th>사용</th>
+                </tr>
+                <tr>
+                    <td>/현재노래저장</td>
+                    <td>현재 재생중인 노래를 플레이리스트에 저장합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>/대기열전체저장</td>
+                    <td>대기열 노래전체를 플레이리스트에 저장합니다</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table class="commands" id="board5">
+                <tr>
+                    <th>명령어</th>
+                    <th>설명</th>
+                    <th>사용</th>
+                </tr>
+                <tr>
+                    <td>!대기열</td>
+                    <td>대기열을 표기합니다</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>!제거</td>
+                    <td>필터 및 대기열 전체를 제거하는 메뉴를 표기합니다</td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <div class="divider"></div>
+</body>
+<script>
+
+    document.getElementById('board1').style.display = 'block';
+    for (let i = 1; i <= 5; i++){
+        if (i != Number('1')){
+            console.log(document.getElementById('board' + String(i)));
+            document.getElementById('board' + String(i)).style.display = 'none';
+        }
+    }
+
+    document.getElementById('1').style.backgroundColor = '#6867de';
+    for (let i = 1; i <= 5; i++){
+        if (i != Number('1')){
+            document.getElementById(String(i)).style.backgroundColor = 'transparent';
+        }
+    }
+
+    function change_board(el){
+        btn_id = el.id;
+        board_id = 'board' + btn_id;
+
+        document.getElementById(board_id).style.display = 'block';
+        for (let i = 1; i <= 5; i++){
+            if (i != Number(btn_id)){
+                document.getElementById('board' + String(i)).style.display = 'none';
+            }
+        }
+
+        document.getElementById(btn_id).style.backgroundColor = '#6867de';
+        document.getElementById(btn_id).className = 'closed';
+        for (let i = 1; i <= 5; i++){
+            if (i != Number(btn_id)){
+                document.getElementById(String(i)).style.backgroundColor = 'transparent';
+                document.getElementById(String(i)).className = 'open';
+            }
+        }
+    }
+</script>
+</html>
